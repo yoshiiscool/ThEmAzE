@@ -1,0 +1,12 @@
+{
+    "image1": {
+        "data": "hwQPABAAAAAAAAAAzMzMAABmzMzczcwMYHaXaca9vAxgd3dpxt28y3Z3iIiI3LzLdoeYiYjcu8t2iJiJiNy7y3aImImI3LvLdoiYiYjcu8t2h5iJiNy7y3Z3iIiI3LzLYHeHiMjdvMtgdpdpxr28DABmzMzczcwMAAAAAMzMzAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Among us Orb"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
