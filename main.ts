@@ -1,5 +1,13 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.purpleSwitchDown)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
+    scene.cameraShake(8, 1000)
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.purpleSwitchDown)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairLadder, function (sprite, location) {
     game.splash("The Orb Level ")
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
     tiles.setTilemap(tilemap`Orb Level`)
     info.startCountdown(10)
 })
@@ -130,24 +138,21 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenOuterNorth2, functio
         `)
     info.startCountdown(20)
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile13, function (sprite, location) {
-    tiles.placeOnRandomTile(mySprite, sprites.dungeon.purpleSwitchDown)
-})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleBlueCrystal, function (sprite, location) {
     game.splash("THE FINAL LEVEL!!!")
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.purpleSwitchDown)
-    info.startCountdown(35)
+    info.startCountdown(130)
     info.changeScoreBy(10000000000000)
     tiles.setTilemap(tilemap`level14`)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairEast, function (sprite, location) {
     game.splash("Confusion Level")
-    info.startCountdown(10)
+    info.startCountdown(15)
     mySprite2 = sprites.create(assets.image`Among us Orb`, SpriteKind.Player)
     tiles.setTilemap(tilemap`level4`)
 })
-scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile9, function (sprite, location) {
-    tiles.placeOnRandomTile(mySprite, sprites.dungeon.purpleSwitchDown)
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, location) {
+    game.over(true, effects.smiles)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
     game.splash("castle")
@@ -283,24 +288,7 @@ scene.setBackgroundImage(img`
     4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
     4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
     `)
-mySprite = sprites.create(img`
-    . . . . c c c c c c . . . . . . 
-    . . . c 6 7 7 7 7 6 c . . . . . 
-    . . c 7 7 7 7 7 7 7 7 c . . . . 
-    . c 6 7 7 7 7 7 7 7 7 6 c . . . 
-    . c 7 c 6 6 6 6 c 7 7 7 c . . . 
-    . f 7 6 f 6 6 f 6 7 7 7 f . . . 
-    . f 7 7 7 7 7 7 7 7 7 7 f . . . 
-    . . f 7 7 7 7 6 c 7 7 6 f c . . 
-    . . . f c c c c 7 7 6 f 7 7 c . 
-    . . c 7 2 7 7 7 6 c f 7 7 7 7 c 
-    . c 7 7 2 7 7 c f c 6 7 7 6 c c 
-    c 1 1 1 1 7 6 f c c 6 6 6 c . . 
-    f 1 1 1 1 1 6 6 c 6 6 6 6 f . . 
-    f 6 1 1 1 1 1 6 6 6 6 6 c f . . 
-    . f 6 1 1 1 1 1 1 6 6 6 f . . . 
-    . . c c c c c c c c c f . . . . 
-    `, SpriteKind.Player)
+mySprite = sprites.create(assets.image`Among us Orb`, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`Lava Level`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLarge)
